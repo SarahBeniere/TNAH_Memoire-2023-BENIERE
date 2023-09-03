@@ -1,0 +1,11 @@
+<place type="" xml:id="">
+	<placeName xml:lang="en"/>
+	<placeName xml:lang="{original language}"/>
+	<location>
+		<geo/>
+		<country key="{country ID}"/>
+	</location>
+	<idno type="geonames"/>
+	<idno type="wikidata"/>
+	<note/>
+</place>
