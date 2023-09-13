@@ -113,4 +113,4 @@ TNAH_Memoire-2023-BENIERE
 
 ----------
 ## 📌 Citer ce dépôt
-Sarah Bénière, _Les éditions en ligne de la European Holocaust Research Infrastructure et leur chaîne éditoriale_, mémoire de master « Technologies numériques appliquées à l'histoire », dir. Floriane Chiffoleau et Jean-Damien Généro, École nationale des chartes, 2023, [https://github.com/SarahBeniere/TNAH_Memoire-2023-BENIERE](https://github.com/SarahBeniere/TNAH_Memoire-2023-BENIERE).
+Sarah Bénière, _De l'encodage à la publication : les éditions en ligne de la European Holocaust Research Infrastructure et leur chaîne éditoriale_, mémoire de master « Technologies numériques appliquées à l'histoire », dir. Floriane Chiffoleau et Jean-Damien Généro, École nationale des chartes, 2023, [https://github.com/SarahBeniere/TNAH_Memoire-2023-BENIERE](https://github.com/SarahBeniere/TNAH_Memoire-2023-BENIERE).
