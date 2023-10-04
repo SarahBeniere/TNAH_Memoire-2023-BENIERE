@@ -1,0 +1,49 @@
+% Extrait du script de recherche
+
+\label{Script}
+
+\begin{minted}[linenos, breaklines=true]{python}    
+    import os  # Allows interaction with the computer, regardless of its operating system.
+    import sys  # Allows for the argument to be called directly from the command line.
+    from bs4 import BeautifulSoup
+  
+    def parse(corpus):
+        """ Parses the given corpus.
+        Parameter
+        ---------
+        corpus
+           Absolute path for the corpus.
+           Corresponds to "arg1" in the command line.
+        """
+        for root, dirs, files in os.walk(corpus):
+            for filename in files:
+                with open(os.path.join(root, filename), 'r', encoding='UTF-8') as xml_file:
+                # Opens the files in 'read' mode and stores the opened file in a variable called 'xml_file'.
+                    xml_content = xml_file.read()
+                    # The 'xml_content' variable stores the content of the file opened in 'xml_file' with the '.read()' method.
+                    soup = BeautifulSoup(xml_content, 'xml')
+                    # Creates a 'soup' object, which parses 'xml_content' with the XML parser included in the BeautifulSoup library.
+                    yield filename, soup
+                    # The 'yield' statement suspends the execution of the function to return a result, and then resumes execution instead of starting over every time.
+
+   
+    def missing_tag(tag):
+        """ Finds the files from which the element is missing.
+        Parameter
+        ---------
+        tag : str
+            Name of the researched element, between quotation marks.    
+        Returns
+        -------
+        set()
+            Set containing the names of the files from which the given element is missing.
+        """
+        files_missing_tag = set()
+        for filename, soup in parse(sys.argv[1]):
+            # Uses the 'parse' function to parse the corpus provided by 'arg1' in the command line.
+            if not soup.find_all(tag):
+                files_missing_tag.add(filename)
+                # Adds the name of the file to the set if the '.find_all()' method does not find any occurrence.
+                print(filename)
+    # Example --> missing_tag("catRef")
+\end{minted}

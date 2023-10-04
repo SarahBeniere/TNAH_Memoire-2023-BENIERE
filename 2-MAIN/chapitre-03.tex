@@ -1,0 +1,40 @@
+% La diplomatique à l'épreuve du numérique
+
+\section{La diplomatique}
+
+\subsection{En tant que science}
+La diplomatique est \enquote{la science qui étudie la tradition, la forme et l'élaboration des actes écrits. Son objet est d'en faire la critique, de juger de leur sincérité, d'apprécier la qualité de leur texte, de dégager des formules tous les éléments du contenu susceptibles d'être utilisés par l'historien, de les dater, enfin de les éditer\footcite[p.~21]{VocArchivistique1997}}. À l'origine, la diplomatique ne servait qu'à analyser les actes médiévaux dans le cadre de contestations judiciaires\footcite[p.~604]{Duranti2003}. Ceci explique pourquoi une partie du vocabulaire utilisé pour décrire les documents n'est pas adaptée à l'analyse de documents contemporains.  
+
+
+\subsection{L'analyse diplomatique}
+L'analyse diplomatique d'un acte est traditionnellement divisée en plusieurs catégories. Les caractéristiques externes\footcite[p.~45-50]{VocArchivistique1997} d'un document concernent sa matérialié, notamment le support utilisé (papyrus, parchemin, papier, etc.). Les caractéristiques internes \footcite[p.~51-68]{VocArchivistique1997} concernent l'écrit lui-même et analyse son contenu.  
+
+
+\subsection{La diplomatique contemporaine}
+Durant la seconde moitié du XX\ieme{} siècle, l'analyse diplomatique a été étendue aux documents administratifs\footcite[p.~604-605]{Duranti2003} et les catégories de documents écrits ont été élargies. On parlera ainsi de \enquote{document dispositif} lorsque l'action juridique dépend de sa mise à l'écrit, de \enquote{document probatoire} lorsque sa mise à l'écrit apporte une preuve à l'action juridique\footcite[p.~22]{VocArchivistique1997}, de \enquote{document à l'appui} quand celui-ci contribue à l'action sans la créer ni la prouver, et enfin de \enquote{document narratif} pour tout document qui ne participe pas à l'action juridique\footcite[p.~605]{Duranti2003}  .
+
+
+
+\section{Typologie documentaire des éditions EHRI}
+Si l'on se rapporte à la typologie documentaire établie par Luciana Duranti, les éditions EHRI sont composées de documents probatoires, à l'appui et narratifs. Nous distinguons trois types de documents principaux~: les témoignages, les rapports diplomatiques et les articles de presse.  
+
+Chacune des éditions de l'EHRI se concentre sur un aspect de l'histoire de la Shoah. De nombreux documents prennent la forme de témoignages. Au sens de la diplomatique contemporaine, ce sont des documents narratifs décrivant la persécution de la population juive en Europe à partir de 1933. Les témoignages sont de trois natures principales~: les extraits de journaux intimes, la correspondance, et les témoignages oraux. Ces derniers ont été recueillis \textit{a posteriori} et transcrits, notamment les témoignages judiciaires entendus lors des procès des dirigeants nazis après la guerre. Les témoignages ont été rédigés par des Juif$\cdot$ve$\cdot$s eux$\cdot$elles-mêmes ou par des témoins de leur persécution.
+
+Les rapports diplomatiques diffèrent des témoignages dans la mesure où ce sont des documents officiels. Ils prennent parfois la forme d'un document attaché à une lettre, parfois le contenu du rapport se trouve dans un télégramme. Ils témoignent du sort de la population juive, notamment au moment des déportations. Certains rapports sont rédigés sur du papier à lettre officiel, dont il convient d'encoder l'en-tête.  
+
+En plus des témoignages directs, les collections contiennent également de nombreux articles parus dans la presse. Seul le texte de l'article est encodé, même lorsque toute une page du journal est numérisée.  
+
+
+
+\section{Le standard TEI pour l'encodage des documents}
+
+\subsection{Un standard ouvert et interopérable}
+La TEI est un standard qui a été développé \enquote{par la communauté scientifique, pour son propre usage\footcite{Burnard2015}}. Elle s'appuie sur le métalangage XML et permet un encodage sémantique du texte. Contrairement au traitement de texte, qui s'attache plutôt à l'apparence du texte, la TEI permet par exemple de différencier sémantiquement des homonymes, de sorte que lors de la construction d'un index les occurrences ne seront pas confondues.  
+
+En outre, la TEI est un standard interopérable, et un texte encodé suivant ses recommandations sera toujours lisible. Elle est détachée de tout logiciel et des mises à jours dont celui-ci aurait besoin, ou de son obsolescence. L'encodage TEI est lisible par l'humain.  
+
+
+\subsection{Diplomatique et TEI}
+Les documents encodés en TEI ont une structure initiale identique~: le \texttt{<teiHeader>} et le \texttt{<text>}. Le \texttt{<teiHeader>} regroupe les métadonnées concernant le document. Cette section a une structure minimale obligatoire mais peut être étendue au besoin. Dans notre processus de création du nouveau modèle d'encodage pour les éditions en ligne de l'EHRI, nous avons considérablement précisé les champs contenus dans le \texttt{<teiHeader>} (Annexe \ref{Metadonnees}). Le \texttt{<text>} contient l'encodage de la partie textuelle du document. Il contient un élément \texttt{<body>} qui peut être divisé en sections avec des éléments \texttt{<div>} (\enquote{\textit{ext division}}) selon la structure du texte.  
+
+La diplomatique, comme toutes les sciences, dispose d'un vocabulaire spécifique. La notion de \enquote{protocole}, par exemple, n'est pas représentée en tant que telle au sein de la TEI\footcite[p.~185]{Clavaud2015}. Toutefois, un encodage rigoureux du texte et des métadonnées permet d'identifier toutes les informations qui seraient regroupées sous l'appellation \enquote{protocole} (initial ou final) dans une analyse diplomatique.

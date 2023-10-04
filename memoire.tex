@@ -1,0 +1,217 @@
+% Préambule
+\documentclass[a4paper, 12pt, twoside]{book}
+
+% Paquets obligatoires
+\usepackage{lmodern}
+\usepackage[english, french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[pdfusetitle, pdfsubject={Mémoire TNAH BENIERE 2023}]{hyperref}
+    \hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+
+% Configuration de la mise en page
+\usepackage[margin=2.5cm]{geometry}  % Marges du document
+\usepackage{parskip}  % Espacement entre les paragraphes
+    \parskip=6pt
+\usepackage{setspace}  % Mise en forme des paragraphes
+    \onehalfspacing
+    \setlength\parindent{1cm}
+
+% Configuration de la bibliographie
+\usepackage[backend=biber, sorting=nyt, style=enc]{biblatex}
+\usepackage[autostyle]{csquotes}
+\addbibresource{bibliographie.bib}
+\nocite{*}
+
+% Paquets additionnels
+\usepackage{xcolor}  % Gestion des couleurs
+\usepackage{graphicx}  % Gestion des images
+\usepackage{fancyhdr}  % Gestion de l'en-tête et du pied de page
+    \pagestyle{headings}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[LE,RO]{\thepage}
+    \fancyhead[LO,RE]{\leftmark}
+    \setlength{\headheight}{15.5pt}
+    \setcounter{secnumdepth}{3}
+    \setcounter{tocdepth}{3}
+\usepackage{emptypage}  % Gestion des pages vierges
+\usepackage{pdfpages}  % Gestion des PDF
+\usepackage{shorttoc}  % Gestion du sommaire
+\usepackage{array,multirow,makecell}  % Gestion des tableaux
+    \setcellgapes{1pt}
+    \makegapedcells
+    \newcolumntype{R}[1]{>{\raggedleft\arraybackslash }b{#1}}
+    \newcolumntype{L}[1]{>{\raggedright\arraybackslash }b{#1}}
+    \newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+\usepackage{minted}  % Gestion du code
+    \usemintedstyle{perldoc}
+
+% Configuration du point médian
+\def\cdt{\kern-0.5pt\ensuremath\cdot\kern-0.5pt}
+
+\author{Sarah Bénière - M2 TNAH}
+\title{De l'encodage à la publication : les éditions en ligne de la \textit{European Holocaust Research Infrastructure} et leur chaîne éditoriale}
+
+% Mémoire
+\begin{document}
+    \begin{titlepage}
+		\begin{center}
+			
+			\bigskip
+			
+			\begin{large}				
+				ÉCOLE NATIONALE DES CHARTES\\
+				UNIVERSITÉ PARIS, SCIENCES \& LETTRES
+			\end{large}
+			\begin{center}\rule{2cm}{0.02cm}\end{center}
+			
+			\bigskip
+			\bigskip
+			\bigskip
+			
+			\begin{Large}
+				\textbf{Sarah Bénière}\\
+			\end{Large}
+			\begin{normalsize} \textit{licenciée ès lettres}\\
+				\textit{diplômée de master}
+			\end{normalsize}
+			
+			\bigskip
+			\bigskip
+			\bigskip
+			
+			\begin{Huge}
+				\textbf{De l'encodage à la publication :}\\
+			\end{Huge}
+			\bigskip
+			\bigskip
+			\begin{LARGE}
+				\textbf{Les éditions en ligne de la \textit{European Holocaust Research Infrastructure} et leur chaîne éditoriale}\\
+			\end{LARGE}
+			
+			\bigskip
+			\bigskip
+			\bigskip
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.5\linewidth]{1-FRONT//images/logo-ehri.jpg}
+                \label{fig:logo-ehri}
+            \end{figure}
+   
+			\vfill
+			
+			\begin{large}
+				Mémoire 
+				pour le diplôme de master \\
+				\og{} Technologies numériques appliquées à l'histoire \fg{} \\
+				\bigskip
+				2023
+			\end{large}
+		\end{center}
+	\end{titlepage}
+
+    \thispagestyle{empty}
+    \cleardoublepage
+
+    \frontmatter
+    % Résumé du mémoire
+    \chapter{Résumé}
+    \medskip
+    Le projet EHRI (\textit{European Holocaust Research Infrastructure}) a pour objectif de promouvoir la recherche sur la Shoah, notamment grâce à la publication en ligne de documents d'archives sous la forme d'éditions thématiques. Le présent mémoire rend compte du développement du modèle d'encodage de ces éditions, à partir des collections déjà publiées, et propose un aperçu de leur publication avec l'outil TEI Publisher.
+
+    % Mots-clés
+    \bigskip
+    \textbf{Mots-clés~:} Édition numérique~; XML-TEI~; ODD~; Modèle d'encodage~; TEI Publisher~; Histoire de la Shoah.
+
+    % Informations bibliographiques
+    \bigskip
+    \textbf{Informations bibliographiques~:} Sarah Bénière, \textit{De l'encodage à la publication : les éditions en ligne de la European Holocaust Research Infrastructure et leur chaîne éditoriale}, mémoire de master \enquote{Technologies numériques appliquées à l'histoire}, dir. Floriane Chiffoleau et Jean-Damien Généro, École nationale des chartes, 2023.
+
+    \newpage{\pagestyle{empty}\cleardoublepage}
+
+    % Remerciements
+    \chapter{Remerciements}
+    \input{1-FRONT/remerciements.tex}
+
+    % Sigles et abréviations
+    \chapter{Liste des sigles et abréviations}
+    \input{1-FRONT/abreviations.tex}
+
+    % Sommaire
+    \addcontentsline{toc}{chapter}{Sommaire}
+    \shorttoc{Sommaire}{0}
+
+    % Bibliographie
+    \chapter{Bibliographie}
+    \printbibliography[heading=subbibliography, keyword={edition}, title={Généralités sur l'édition de textes}]
+    \printbibliography[heading=subbibliography, keyword={ednum}, title={Pratique de l'édition numérique}]
+    \printbibliography[heading=subbibliography, keyword={publication}, title={Publication électronique}]
+    \printbibliography[heading=subbibliography, keyword={xml}, title={Environnement XML et standard TEI}]
+    \printbibliography[heading=subbibliography, keyword={archivistique}, title={Archivistique et diplomatique}]
+    \printbibliography[heading=subbibliography, keyword={shoah}, title={Histoire de la Shoah}]
+    \printbibliography[heading=subbibliography, keyword={webographie}, title={Webographie}]
+
+    % Introduction    
+    \chapter{Introduction}
+    \input{1-FRONT/introduction.tex}
+
+    \thispagestyle{empty}
+    \cleardoublepage
+
+    \mainmatter
+    % Partie 1
+    \part{Édition scientifique et numérique}
+    \chapter{Le processus d'édition}
+    \input{2-MAIN/chapitre-01.tex}
+    \chapter{Les éditions du projet EHRI}
+    \input{2-MAIN/chapitre-02.tex}
+    \chapter{La diplomatique à l'épreuve du numérique}
+    \input{2-MAIN/chapitre-03.tex}
+
+    % Partie 2
+    \part{Modèle d'encodage}
+    \chapter{Encodage des éditions EHRI}
+    \input{2-MAIN/chapitre-04.tex}
+    \chapter{Définition du nouveau modèle d’encodage}
+    \input{2-MAIN/chapitre-05.tex}
+    \chapter{Semi-automatisation du modèle}
+    \input{2-MAIN/chapitre-06.tex}
+
+    % Partie 3
+    \part{Publication et valorisation}
+    \chapter{Choix de l'outil de publication}
+    \input{2-MAIN/chapitre-07.tex}
+    \chapter{EHRI sur l'application DiScholEd}
+    \input{2-MAIN/chapitre-08.tex}
+    \chapter{Transition vers une application dédiée}
+    \input{2-MAIN/chapitre-09.tex}
+
+    % Conclusion
+    \chapter*{Conclusion}
+    \addcontentsline{toc}{chapter}{Conclusion}
+    \input{2-MAIN/conclusion.tex}
+
+    % Annexes
+    \appendix
+    \chapter{Glossaire}
+    \input{3-ANNEXES/glossaire.tex}
+    \chapter{Chronologie de la persécution des Juifs}
+    \input{3-ANNEXES/chronologie.tex}
+    \chapter{Tableau récapitulatif d'encodage}
+    \input{3-ANNEXES/encodage-ehri.tex}
+    \chapter{Encodage des métadonnées}
+    \input{3-ANNEXES/metadonnees.tex}
+    \chapter{Extrait du script de recherche}
+    \input{3-ANNEXES/script.tex}
+
+    \backmatter
+	
+ % Figures
+    \listoffigures
+    
+    % Table des matières
+    \tableofcontents
+    
+\end{document}
