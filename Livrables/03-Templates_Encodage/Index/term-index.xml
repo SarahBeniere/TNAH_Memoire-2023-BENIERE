@@ -1,8 +1,0 @@
-<item xml:id="t">
-	<name xml:lang="{original language}"/>
-	<name xml:lang="en"/>
-	<name xml:lang="{other translation}"/>
-	<desc xml:lang="{en}"/>
-	<link type="ehri" target="{URL to EHRI Portal}"/>
-	<idno type="wikidata"/>
-</item>
