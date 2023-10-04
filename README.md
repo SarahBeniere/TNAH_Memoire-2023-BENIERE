@@ -3,8 +3,7 @@
 * 🎓 Mémoire présenté en vue de l'obtention du Master [Technologies numériques appliquées à l'histoire](https://www.chartes.psl.eu/fr/cursus/master-technologies-numeriques-appliquees-histoire) de l'École nationale des chartes.
 * ✏️ Rédigé par Sarah Bénière.
 * 📋 Dirigé par Floriane Chiffoleau (Inria, [@FloChiff](https://github.com/FloChiff)) et Jean-Damien Généro (École nationale des chartes, [@jeandamien-genero](https://github.com/jeandamien-genero)).
-
-<!-- * 🪧 Soutenu le lundi 25 septembre 2023 à l'École nationale des chartes devant un jury composé de M. Édouard Vasseur (Président du jury), M. Jean-Damien Généro (directeur de mémoire) et Mme Floriane Chiffoleau (tutrice de stage). -->
+* 🪧 Soutenu le lundi 25 septembre 2023 à l'École nationale des chartes devant un jury composé de M. Édouard Vasseur (Président du jury), M. Jean-Damien Généro (directeur de mémoire) et Mme Floriane Chiffoleau (tutrice de stage).
 
 ----------
 ## 📓 Présentation du mémoire
@@ -78,8 +77,8 @@ TNAH_Memoire-2023-BENIERE
 │   │
 │   ├── 02-ODD
 │   │   ├── Travail_Preparatoire
-│   │   │   ├── search-ehri.py
-│   │   │   └── Tableau-EHRI.pdf
+│   │   │   ├── Tableau-EHRI.pdf
+│   │   │   └── search-ehri.py
 │   │   ├── ODD-EHRI.html
 │   │   ├── ODD-EHRI.pdf
 │   │   ├── ODD-EHRI.rng
@@ -97,7 +96,7 @@ TNAH_Memoire-2023-BENIERE
 │   │   ├── Maquettes
 │   │   │   ├── 01-Homepage.png
 │   │   │   ├── 02-Collection.png
-│   │   │   └── 01-Document.png
+│   │   │   └── 03-Document.png
 │   │   └── Specifications.pdf
 │   │
 │   └── README.md
@@ -105,6 +104,8 @@ TNAH_Memoire-2023-BENIERE
 ├── Memoire-2023-BENIERE.pdf
 │
 ├── README.md
+│
+├── Soutenance-2023-BENIERE.pdf
 │
 ├── bibliographie.bib
 │
