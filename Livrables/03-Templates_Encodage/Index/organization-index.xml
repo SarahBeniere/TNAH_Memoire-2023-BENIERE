@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <org xml:id="">
 	<orgName xml:lang="en"/>
 	<orgName xml:lang="{original language}"/>
@@ -10,17 +9,4 @@
 		<country key="{country ID}"/>
 	</place>
 	<idno type="VIAF"/>
-=======
-<org xml:id="">
-	<orgName xml:lang="en"/>
-	<orgName xml:lang="{original language}"/>
-	<desc xml:lang="en"/>
-	<place xml:id="">
-		<placeName xml:lang="en"/>
-		<placeName xml:lang="{original language}"/>
-		<settlement type="city"/>
-		<country key="{country ID}"/>
-	</place>
-	<idno type="VIAF"/>
->>>>>>> 3b7e4f5d184c391118614d1d7ff2e29e86ab9306
 </org>

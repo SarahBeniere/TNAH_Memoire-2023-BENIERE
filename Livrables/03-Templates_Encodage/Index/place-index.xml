@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <place type="" xml:id="">
 	<placeName xml:lang="en"/>
 	<placeName xml:lang="{original language}"/>
@@ -10,16 +9,4 @@
 	<idno type="wikidata"/>
 	<note/>
 </place>
-=======
-<place type="" xml:id="">
-	<placeName xml:lang="en"/>
-	<placeName xml:lang="{original language}"/>
-	<location>
-		<geo/>
-		<country key="{country ID}"/>
-	</location>
-	<idno type="geonames"/>
-	<idno type="wikidata"/>
-	<note/>
-</place>
->>>>>>> 3b7e4f5d184c391118614d1d7ff2e29e86ab9306
+
